@@ -1,0 +1,80 @@
+body {
+    background-color: beige;
+}
+#uno {
+    height: 60px;
+    font-size: 45px;
+    margin-left: 110px;
+    margin-top: 25px;
+}
+#dos {
+    height: 100px;
+    margin-top: 100px;
+}
+.hhhff {
+    margin-right: 320px;
+    color: blue;
+}
+.mover {
+    height: 150px;
+    margin-left: 10px;
+}
+/* #carrus {
+    height: 500px;
+} */
+.patro {
+    width: 400px;
+    height: 90px;
+}
+#carrus img {
+    height: 500px;
+}
+.imageT {
+    height: 40px;
+    width: 60px;
+    margin-left: 700px;
+}
+.imageF {
+    height: 45px;
+    width: 56px;
+}
+.imgI {
+    height: 60px;
+    width: 65px;
+}
+.ali {
+    margin-left: 1050px;
+}
+.ali img {
+    height: 40px;
+    width: 40px;
+}
+.texto1 {
+    font-size: 30px;
+}
+.telefono {
+    height: 60px;
+    width: 60px;
+    margin-left: 60px;
+    rotate: 260deg;
+}
+.aiuda {
+    display: flex;
+    margin: 30px 15px;
+}
+.titi {
+    font-size: 25px;
+}
+.numb {
+    margin: 0px 10px;
+    font-size: 20px;
+}
+.gma {
+    height: 70px;
+    width: 70px;
+    margin: -5px 60px;
+}
+.corr {
+    margin-left: -40px;
+    font-size: 20px;
+}
