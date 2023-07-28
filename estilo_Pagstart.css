@@ -19,12 +19,12 @@ body {
     height: 150px;
     margin-left: 10px;
 }
-/* #carrus {
-    height: 500px;
-} */
+.frase {
+    text-align: center;
+}
 .patro {
-    width: 400px;
-    height: 90px;
+    width: 300px;
+    height: 200px;
 }
 #carrus img {
     height: 500px;
