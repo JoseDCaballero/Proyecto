@@ -1,35 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Tips viajeros</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>    
     <style>
         body {
-            background-color: #000;
+            background-image: url(https://static.vecteezy.com/system/resources/thumbnails/001/632/448/small/dark-blue-stripes-geometric-overlapping-background-free-vector.jpg);
+            background-size: cover;
         }
         h1 {
             color: #fff;
             text-align: center;
         }
         .listaD {            
-            background: rgba(255, 255, 255, 0.44);
+            /* background: rgba(255, 255, 255, 0.44);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(8.3px);
             -webkit-backdrop-filter: blur(8.3px);
+            border: 1px solid rgba(255, 255, 255, 0.3); */
+            background: rgba(255, 255, 255, 0.21);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2.1px);
+            -webkit-backdrop-filter: blur(2.1px);
             border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+        .listaD dt {
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;            
+        }
+        .listaD dd {
+            font-size: 18px;
+            text-align: justify;
+        }
+        .despedida {
+            text-align: center;
         }
     </style>
 </head>
-<body>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
     <h1>Algunos tips y consejos para viajeros primerizos</h1>
+    <br>
     <div class="listaD">
-        <ul>
-            <li>Di</li>
-            <li>Hola</li>
-            <li>Mundo</li>             
-        </ul>
+        <dl>
+            <dt>Conoce las reglas</dt>
+            <dd>Dependiendo del destino de tu próximo viaje, las normas relacionadas con la duración permitida para permanecer en el país como turista pueden diferir significativamente. Es fundamental que te informes sobre los reglamentos vigentes y verifiques si necesitas una visa. Además, asegúrate de que tu pasaporte tenga una validez de al menos seis meses después de la fecha de tu regreso, ya que esto es un requisito en muchos países.</dd>
+            <br>
+            <dt>Mantente conectado</dt>
+            <dd>Es una situación que seguramente te resultará familiar. ¿Te ha ocurrido alguna vez que, durante una conversación que podría cambiar tu vida, te das cuenta de que la batería de tu teléfono está al cuatro por ciento? Comienzas a escribir cada vez más rápido, intentando expresar todo lo que deseas antes de que el teléfono se apague. Es una sensación frustrante, ¿verdad? Pero no te preocupes, ¡hay un salvavidas en esta situación! Asegúrate de llevar siempre contigo un cargador y un adaptador, así podrás cargar tus dispositivos electrónicos en cualquier lugar del mundo donde te encuentres.</dd>
+            <br>
+            <dt>Usa mapas</dt>
+            <dd>Si cuentas con un dispositivo iOS o Android, nunca tendrás que preocuparte por perderte de nuevo. Esto se debe a que Google permite a los usuarios de ambas plataformas guardar mapas fuera de línea, lo que te permitirá acceder a ellos sin necesidad de conexión a Internet (dile adiós a las costosas tarifas de roaming). Incluso puedes guardar zonas tan extensas como el metro de París y hasta 6 mapas al mismo tiempo. Si ya tienes en mente las ciudades que visitarás durante tu viaje, nuestra recomendación es que descargues los mapas antes de partir.</dd>
+            <br>
+            <dt>Elige la conexión local</dt>
+            <dd>Si planeas quedarte en el mismo país por un período prolongado, es recomendable invertir en una tarjeta SIM local. Esto te permitirá mantener el contacto con amigos locales, llamar taxis y navegar por internet sin preocuparte por las tarifas de roaming o wifi. Es importante llevar contigo un teléfono desbloqueado, ya que no podrás instalar una tarjeta SIM local en un teléfono bloqueado. De esta manera, estarás más conectado y disfrutarás de una mayor comodidad durante tu estancia en el país.</dd>
+            <br>
+            <dt>Investiga</dt>
+            <dd>Antes de partir, es fundamental que busques información sobre tu destino. Casi todas las ciudades, incluso las más pequeñas, tienen un sitio web local que muestra los eventos y actividades que se llevarán a cabo en los próximos meses. Además, te recomiendo consultar las ediciones locales de la revista TimeOut, ya que son una excelente fuente de recursos para descubrir eventos interesantes en la ciudad que visitarás. Mantente informado y aprovecha al máximo tu experiencia de viaje al estar al tanto de todo lo que sucede en tu destino.</dd>
+            <br>
+            <dt>Aprende a comunicarte con la gente local</dt>
+            <dd>La clave para hacer amigos y sentirte como en casa en tu nueva ciudad, incluso si solo vas a estar unos pocos días, es saber cómo comunicarte con la gente local. No es necesario que seas un experto en el idioma, pero conocer algunas frases básicas te ayudará mucho, y cuanto más aprendas, mejor será. Antes de salir, te sugiero comprar un libro de frases; son económicos, livianos y fáciles de transportar. Dedica un tiempo a estudiarlo. Ser capaz de reservar un taxi, comprar alimentos en el mercado local o explicar tus alergias a un médico puede hacer una gran diferencia y, en ciertos casos, incluso salvarte la vida. ¡Créeme, vale la pena estar preparado!</dd>
+            <br>
+            <dt>¡No olvides el efectivo!</dt>
+            <dd>Excepto si vas a viajar a Suecia, donde el gobierno está impulsando una sociedad libre de efectivo, en la mayoría de los países, especialmente aquellos en desarrollo, el efectivo sigue siendo el medio de pago predominante. No querrás encontrarte en una situación complicada sin poder pagar alimentos, transporte o alojamiento por no tener acceso a un cajero automático cercano, así que asegúrate de llevar suficiente dinero en efectivo antes de partir. Sin embargo, debes tener cuidado con los carteristas; es recomendable no guardar todo tu dinero en un solo lugar y nunca dejarlo sobre la cama al salir de tu habitación de hotel. Tomar estas precauciones te ayudará a tener un viaje más seguro y a disfrutar de tu experiencia sin preocupaciones.</dd>
+            <br>
+            <dt>Arma tu maleta como un experto</dt>
+            <dd>Nada es más molesto que llevar una enorme maleta repleta de cosas que probablemente no usarás y descubrir que no tienes suficiente espacio para llevar de regreso esas increíbles compras que hiciste, sin tener que pagar por exceso de equipaje en tu vuelo de vuelta. Para evitar esta situación, es crucial que manejes con maestría uno de los aspectos más esenciales (aunque menos divertidos) de la preparación de un viaje. Controlar tu equipaje de manera inteligente te permitirá disfrutar de tu viaje sin preocupaciones y traer a casa todas esas maravillosas adquisiciones sin complicaciones.</dd>
+        </dl>
+    </div>
+    <br>
+    <div class="despedida">
+        <a href="pagina_de_inicio.html"><button class="btn btn-outline-primary">¡Gracias por los consejos!</button></a>
     </div>
 </body>
 </html>
