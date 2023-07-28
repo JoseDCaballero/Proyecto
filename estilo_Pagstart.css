@@ -1,15 +1,39 @@
 body {
-    background-color: beige;
+    /* background-color: beige; */
+    background-image: url(https://previews.123rf.com/images/iulias/iulias1502/iulias150201028/36556456-hermoso-fondo-vintage-con-diferentes-patrones-de-color-amarillo-beige-marr%C3%B3n-gris.jpg);
+    background-size: cover;
 }
 #uno {
     height: 60px;
     font-size: 45px;
-    margin-left: 110px;
-    margin-top: 25px;
+    margin-left: 100px;
+    margin-top: 25px;    
+}
+#glas, #glass {    
+    background-color: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.1px);
+    -webkit-backdrop-filter: blur(11.1px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ult {
+    margin-left: 50px;
 }
 #dos {
     height: 100px;
     margin-top: 100px;
+}
+#prese {    
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.33);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12.5px);
+-webkit-backdrop-filter: blur(12.5px);
+border: 1px solid rgba(255, 255, 255, 0.15);
+color: #fff;
+padding-left: 70px;
 }
 .hhhff {
     margin-right: 320px;
@@ -57,10 +81,18 @@ body {
     width: 60px;
     margin-left: 60px;
     rotate: 260deg;
+    margin-top: 15px;
 }
 .aiuda {
     display: flex;
-    margin: 30px 15px;
+    margin: 30px 15px 20px 10px;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.1px);
+    -webkit-backdrop-filter: blur(11.1px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
 }
 .titi {
     font-size: 25px;
@@ -68,13 +100,16 @@ body {
 .numb {
     margin: 0px 10px;
     font-size: 20px;
+    margin-top: 15px;
 }
 .gma {
     height: 70px;
     width: 70px;
     margin: -5px 60px;
+    margin-top: 10px;
 }
 .corr {
     margin-left: -40px;
     font-size: 20px;
+    margin-top: 10px;
 }
