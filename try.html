@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div class="jum">
+            <p class="lead text-center">Buscador de imágenes</p>
+            
+        <form>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <input type="text" class="form-control form-control-lg" id="busquedad" placeholder="Busca una imagen, ejemplo: Cancún">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="button" class="btn btn-lg btn-danger btn-block" value="Buscar" onclick="cargarImagenes()">
+                </div>
+            </div>
+            <div class="error" id="msj-error"></div>
+        </form>            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 p-5 row" id="listadoImagenes">
+
+            </div>
+            <div id="paginacion">
+
+            </div>
+        </div>        
+        <div class="redireccion">
+            <a href="vuelo.html"><button class="btn btn-outline-success">¡Tengo mi destino!</button></a>
+        </div>
+    </div>
+    <script>
+        const cargarImagenes = async() => {
+            let input = document.querySelector("#busquedad").value;
+            if (input === ''){
+                mostrarError("#msj-error", "Este campo no puede quedarse vacío");
+                return;
+            }
+
+            const key = "38540858-7e235397a199eaf533c2ff91e";
+            const url=`https://pixabay.com/api/?key=${key}&q=${input}`;
+            
+            const respuesta = await fetch(url);
+            const resultado = await respuesta.json();
+
+            let imagenes = resultado.hits;
+
+                    //    <div class="card-body">
+                    //         <p class="card-text">${likes} Me gusta</p>
+                    //         <p class="card-text">${views} Vistas
+                    //     </div>
+
+            let images = ``;
+            imagenes.map(imagen => {
+                const{largeImageURL, previewURL, tags} = imagen;//likes, views
+
+                images +=`
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="${previewURL}" alt="${tags}" class="card-img-top">
+ 
+                        <div class="card-footer">
+                            <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-block">Ver imagen</a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+
+            divListadoImagenes = document.querySelector("#listadoImagenes");
+            divListadoImagenes.innerHTML=`<div style="text-align:center"> <img src="https://i.pinimg.com/originals/77/97/81/779781883952778b25974baa3cf7679c.gif" width=300px height=300px></div>`;
+
+            setTimeout(() => {
+                divListadoImagenes.innerHTML = images;
+            }, 1800);
+        }
+
+        const mostrarError=(elemento, mensaje) => {
+            divError=document.querySelector(elemento);
+            divError.innerHTML=`<p class="alert alert-primary">${mensaje}</p>`;
+            setTimeout(() => {divError.innerHTML = ``;}, 2000);
+        }
+    </script>
+</body>
+</html>
