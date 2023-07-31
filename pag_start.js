@@ -4,8 +4,9 @@ function agregarRegistro(){
     let nombre = document.getElementById("correoOriginal").value;
     let fecha = document.getElementById("Nombre").value;
     let descripcion = document.getElementById("floatingPassword").value;
+    let vamos = document.getElementById("floatingPassword").value;
 
-    if (!nombre || !fecha || !descripcion) {
+    if (!nombre || !fecha || !descripcion || !vamos) {
         alert("Los campos no pueden quedarse vacíos");
         return;
     } else {

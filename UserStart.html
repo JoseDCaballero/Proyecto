@@ -45,25 +45,53 @@
         </div>
       <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Contraseña</label>
+          <label for="floatingPassword">Contraseña</label>          
+          <!--  -->
+          <dialog id="modal">
+            <div class="container">
+                <div>
+                    <label for="email">Dirección de correo electrónico:</label> 
+                    <input type="text" id="nombre" />
+                </div>
+                <div>
+                    <button onclick="agregarRegistro()">Buscar</button>
+                </div>
+            </div>  
+        </dialog>   
+        <div class="contenedor">
+          <div class="open">           
+              <a id="modal-open" class="button_more" onclick="modal_open(this)">Olvidé mi contraseña</a> <!-- <a href="recuperar.html">Olvidé mi contraseña</a>  -->
+          </div>
+        </div>
+          <!--  -->
       </div>
       </form>
       <div class="bott">
         <br>        
         <button type="submit" class="btn btn-outline-dark mb-3" onclick="validar()">Iniciar sesión</button><!---->
+        <button type="submit" class="btn btn-outline-dark mb-3" onclick="creacion()">¿No tiene cuenta?</button>
       </div>
     </main>
     <script>
+      let modal_open=()=>{
+        modal.showModal();
+      };
       function validar(){
         let valor = 'josdacab28@gmail.com';
+        let valor2 = '22090601@alumno.utmetropolitana.edu.mx';
         let respuesta = document.getElementById("correo").value;
         if (respuesta === ''){
           alert("Los campos no pueden quedarse vacíos");
-        }else if(respuesta === valor){
+        }else if(respuesta === valor || respuesta === valor2){
           window.location.href = "try.html";
         } else {
           alert("Usuario no existe, intente de nuevo"); return;
         }
+        document.getElementById("correo").value = "";
+        document.getElementById("floatingPassword").value = "";
+      }
+      function creacion() {
+        window.location.href = "CreateUser.html";
       }
     </script>
 </body>
