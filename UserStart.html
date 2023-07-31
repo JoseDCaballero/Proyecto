@@ -57,7 +57,9 @@
       function validar(){
         let valor = 'josdacab28@gmail.com';
         let respuesta = document.getElementById("correo").value;
-        if(respuesta === valor){
+        if (respuesta === ''){
+          alert("Los campos no pueden quedarse vacíos");
+        }else if(respuesta === valor){
           window.location.href = "try.html";
         } else {
           alert("Usuario no existe, intente de nuevo"); return;
