@@ -6,11 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
 </head>
-<body>
-    <div id="contenedor">
-        <div class="jum">
-            <p class="lead text-center">Buscador de imágenes</p>
-            
+<body>    
+    <div id="contenedor">        
+        <div class="jumbotron">
+            <a href="pagina_de_inicio.html"><button class="btn btn-primary">Salir</button></a>
+            <p class="lead text-center">Buscador de imágenes</p>            
         <form>
             <div class="row">
                 <div class="form-group col-md-8">
@@ -31,18 +31,21 @@
 
             </div>
         </div>        
-        <div class="redireccion">
-            <a href="vuelo.html"><button class="btn btn-outline-success">¡Tengo mi destino!</button></a>
-        </div>
     </div>
     <script>
+        let paginaActual = 1;
+        let totalPaginas = 0;
         const cargarImagenes = async() => {
             let input = document.querySelector("#busquedad").value;
+            let divPaginacion = document.querySelector("#paginacion");
+            divPaginacion.style.display = "none";
+
             if (input === ''){
                 mostrarError("#msj-error", "Este campo no puede quedarse vacío");
                 return;
             }
 
+            const imagenesPorPagina = 20;
             const key = "38540858-7e235397a199eaf533c2ff91e";
             const url=`https://pixabay.com/api/?key=${key}&q=${input}`;
             
@@ -75,9 +78,40 @@
             divListadoImagenes = document.querySelector("#listadoImagenes");
             divListadoImagenes.innerHTML=`<div style="text-align:center"> <img src="https://i.pinimg.com/originals/77/97/81/779781883952778b25974baa3cf7679c.gif" width=300px height=300px></div>`;
 
+            totalPaginas = Math.ceil(resultado.totalHits/imagenesPorPagina);
+
+            let pagAnterior = (paginaActual === 1) ? `` : `
+            <button type="button" class="btn btn-info" onclick="paginaAnterior()">Anterior</button>`;
+
+            let pagSiguiente = (paginaActual === totalPaginas) ? `` : `
+            <button type="button" class="btn btn-info" onclick="paginaSiguiente()">Siguiente</button> <a href="vuelo.html"><button type="button" class="btn btn-info" onclick="avanzar()">¡Tengo mi destino!</button></a>`;
+
             setTimeout(() => {
                 divListadoImagenes.innerHTML = images;
-            }, 1800);
+                divPaginacion.style.display = "block";
+                divPaginacion.innerHTML = `${pagAnterior} ${pagSiguiente}`;
+            }, 1800);            
+
+            const jumbotron = document.querySelector(".jumbotron");
+            jumbotron.scrollIntoView({behavior:'smooth'});
+        }
+
+        const paginaAnterior=()=>{
+            paginaActual--;
+            if(paginaActual === 0){
+                return;
+            } else {
+                cargarImagenes();
+            }
+        }
+
+        const paginaSiguiente = () => {
+            paginaActual++;
+            if(paginaActual > totalPaginas){
+                return;
+            } else {
+                cargarImagenes();
+            }
         }
 
         const mostrarError=(elemento, mensaje) => {
