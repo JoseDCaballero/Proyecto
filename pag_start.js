@@ -19,7 +19,7 @@ function agregarRegistro() {
     registros.push(registro);
 
     // Para actualizar la tabla
-    mostrarRegistros();
+    //mostrarRegistros();
 
     // Para limpiar los input
     document.getElementById("nombre").value = "";
