@@ -1,13 +1,15 @@
-let registros = [];
-
-function agregarRegistro() {
-    let nombre = document.getElementById("floatingInput").value;
+function agregarRegistro(){
+    let registros = [];
+    
+    let nombre = document.getElementById("correoOriginal").value;
     let fecha = document.getElementById("Nombre").value;
     let descripcion = document.getElementById("floatingPassword").value;
 
     if (!nombre || !fecha || !descripcion) {
         alert("Los campos no pueden quedarse vacíos");
         return;
+    } else {
+        window.location.href = "inicio_sesion.html";
     }
 
     let registro = {
@@ -27,6 +29,17 @@ function agregarRegistro() {
     document.getElementById("descripcion").value = "";
 }
 
+function validar() {
+    let respuesta = document.getElementById("correo").value;
+    if (respuesta === ''){
+        alert("Los campos no pueden quedarse vacíos"); return;        
+    } else if (registros.includes(respuesta)){
+        window.location.href = "try.html";
+    }else {
+        alert("El valor ingresado no existe, cree un usuario para acceder");
+        window.location.href = "CreateUser.html";
+    }
+}
 /*function mostrarRegistros() {
     let tablaDatos = document.getElementById("tablaDatos");
 
