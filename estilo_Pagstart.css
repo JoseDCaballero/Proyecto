@@ -1,6 +1,6 @@
 body {
-    /* background-color: beige; */
-    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20200817/ourmid/pngtree-air-travel-on-world-map-background-png-image_394394.jpg);
+    /* background-color: #F5DEB3; */
+    background-image: url(https://media.giphy.com/media/5z0Clc1s7uQfxuC1eG/giphy.gif);
     background-size: cover;
 }
 #uno {
@@ -10,12 +10,12 @@ body {
     margin-top: 25px;    
 }
 #glas, #glass {    
-    background-color: rgba(255, 255, 255, 0.21);
+    background: rgba(255, 255, 255, 0.59);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.1px);
-    -webkit-backdrop-filter: blur(11.1px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .ult {
     margin-left: 50px;
@@ -26,13 +26,13 @@ body {
 }
 #prese {    
 /* From https://css.glass */
-background: rgba(255, 255, 255, 0.33);
+background: rgba(255, 255, 255, 0.59);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(12.5px);
--webkit-backdrop-filter: blur(12.5px);
-border: 1px solid rgba(255, 255, 255, 0.15);
-color: #fff;
+backdrop-filter: blur(8.1px);
+-webkit-backdrop-filter: blur(8.1px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #000;
 padding-left: 70px;
 }
 .hhhff {
@@ -45,6 +45,7 @@ padding-left: 70px;
 }
 .frase {
     text-align: center;
+    color: #fff;
 }
 .patro {
     width: 300px;
@@ -86,18 +87,20 @@ padding-left: 70px;
 .aiuda {
     display: flex;
     margin: 30px 15px 20px 10px;
-    background: rgba(255, 255, 255, 0.21);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.1px);
-    -webkit-backdrop-filter: blur(11.1px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.59);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.1px);
+-webkit-backdrop-filter: blur(8.1px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #000;
 }
 .titi {
     font-size: 25px;
     padding-left: 20px;
     padding-top: 10px;
+    /* text-shadow: -2px -2px 0 black, 3px -2px 0 black, -2px 3px 0 black, -2px -2px 0 black; */
 }
 .numb {
     margin: 0px 10px;

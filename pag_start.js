@@ -29,17 +29,6 @@ function agregarRegistro(){
     document.getElementById("descripcion").value = "";
 }
 
-function validar() {
-    let respuesta = document.getElementById("correo").value;
-    if (respuesta === ''){
-        alert("Los campos no pueden quedarse vacíos"); return;        
-    } else if (registros.includes(respuesta)){
-        window.location.href = "try.html";
-    }else {
-        alert("El valor ingresado no existe, cree un usuario para acceder");
-        window.location.href = "CreateUser.html";
-    }
-}
 /*function mostrarRegistros() {
     let tablaDatos = document.getElementById("tablaDatos");
 
